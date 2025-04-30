@@ -1,0 +1,5 @@
+﻿Name,Treatment,Concentration,Value,SEM
+Mouse Splenocytes,CpG ODN 2395,0,0.1,0.077674535
+Mouse Splenocytes,CpG ODN 2395,100,95.25,2.491231289
+Mouse Splenocytes,CpG ODN 2395,500,636.6666667,6.734246638
+Mouse Splenocytes,CpG ODN 2395,1000,815.7575758,2.04049286

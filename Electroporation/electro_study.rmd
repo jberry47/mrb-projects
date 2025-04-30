@@ -1,0 +1,187 @@
+---
+title: "Electroporation Study - Sample Size Determination"
+author: "Jeffrey Berry - Bayer ETA"
+output: 
+     html_document:
+          css: style.css
+          code_folding: hide
+          toc: false
+          toc_float: 
+               collapsed: false
+          toc_depth: 3
+          fig_caption: false
+geometry: margin=1in
+---
+This document was last updated on: **`r format(Sys.time(), '%d %B, %Y')`**
+<br/>
+<br/>
+
+
+# Introduction {.tabset .tabset-fade}
+There are two primary measurements (tumor size & PFI) in this study. Tumor size is approximately normally distributed and shouldn’t come close to zero (tumor disappears). Each mouse is starting with some tumor size and are recieving various treatments (chemo only IL and IV, RE alone, and combinations) to measure percent shrinkage vs the starting tumor size. The clinically actionable outcome is if the shrinkage is at least 30% and the desired chances is this happening at least 70% of the time. In addition, an adaptive design is requested to manage capacity restraints so that time and resources required to complete the study isn't a problem. The limit is that there is at most up to 18 mice in each treatment arm and up to at most 9 in each round. Dropping treatments from one round to the next following th same rule; at least 70% chance that the shrinkage is at least 30%.
+
+The task is to identify the number of samples needed to achieve tumor shrinkage of 30% or greater with probability greater than 0.7.
+
+# Analysis {.tabset .tabset-fade}
+
+```{r results='hide'}
+#load packages
+options(rlang_backtrace_on_error = "none")
+pkgs <- c("ggplot2","scales","reshape2","plyr","brms","bayestestR","stringr","patchwork","plotly","DT")
+suppressMessages(invisible(sapply(pkgs, require, character.only = TRUE)))
+
+library(bayesianUtils)
+
+my_theme <- theme(strip.background=element_rect(fill="gray50",color="gray20"),
+                  strip.text.x=element_text(size=14,color="white"),
+                  strip.text.y=element_text(size=14,color="white"))+
+            theme(axis.title= element_text(size = 18))+
+            theme(axis.text = element_text(size = 14))+
+            theme(axis.ticks.length=unit(0.2,"cm"))
+
+table_options <- function() {
+  list(
+    dom = 'Bfrtip',
+    pageLength = 10,
+    deferRender = TRUE,
+    searching = FALSE,
+    editable = TRUE,
+    scroller = TRUE,
+    lengthChange = FALSE
+    ,
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({'background-color': '#25ad28', 'color': '#fff'});",
+      "}"
+    )
+      )
+}
+```
+
+## Methods
+### Statistical
+Tumor volume is expected to be normally distributed in all treatments. The conjugate prior to a normal distribution with unknown mean and unknown variance is the ${\text{N-}}\Gamma ^{-1}(\mu,\lambda,\alpha,\beta)$ distribution. The chosen hyperparameters for all treatments resemble the distribution of tumor starting sizes $(\mu=120, \alpha=\beta=1, \lambda=9)$ . Finally the generated tumor reduction distribution $Z$ is the ratio of the difference distribution and Treatment 2. 
+
+$T_1 \sim N(\mu_1, \sigma_1) \thinspace\thinspace\thinspace \& \thinspace\thinspace\thinspace T_2 \sim N(\mu_2, \sigma_2)$
+
+The percent change distribution will be estimated by sampling from the posteriors of treatment 1 and treatment 2, and calculating the percent change for 10,000 draws. 
+
+$Z \sim (T_1 - T_2) / T_2$
+
+This distrubution will used to estimate the probability that a 30% change is observed.
+
+$Pr( Z > 30\% )$
+
+
+
+## Computation {.tabset .tabset-fade}
+#### __Objective__
+Compute the posteriors of two treatments(n=3 to n=18 in increments of 3), one with no change from initial and the other has some true percent change effect (5% to 95% in increments of 5), then use the posteriors to derive the percent change ditribution. With the generated distribution, evaluate the probability of observing an effect larger than 30%
+
+```{r out.width='100%', fig.height=6, eval=F}
+effect_sizes <- seq(from = 0.05,to=0.95,by=0.05)
+reps <- c(3,6,9,12,15,18)
+init_prior <- list(m=120,n=1,s2=9)
+
+back <- t(sapply(effect_sizes,function(eff){
+  rowMeans(sapply(1:1000,function(i){
+    sapply(reps,function(s){
+      treat1 <- bayes_normal(rnorm(s,120*(1-eff),3), priors = init_prior, post_predictive = T)
+      treat2 <- bayes_normal(rnorm(s,120,3), priors = init_prior, post_predictive = T)
+      draws_t1 <- rnorm(10000, treat1$updates$m, sqrt(treat1$updates$s2))
+      draws_t2 <- rnorm(10000, treat2$updates$m, sqrt(treat2$updates$s2))
+      z <- (draws_t2-draws_t1)/draws_t2
+      power <- mean(z > 0.3)
+    })    
+  }))
+}))
+back_df <- melt(setNames(data.frame(effect_sizes,back,row.names = effect_sizes),c("eff",paste0("reps_",reps))),id.vars = "eff")
+save(back_df,file="objects/back_df.rdata")
+```
+
+#### __Result__
+Computation takes about 10 mins, is performed, saved, and loaded for next step
+
+
+## Results {.tabset .tabset-fade}
+#### __Objective__
+Present power table and graphic for interpretation
+
+```{r out.width='100%', fig.height=5}
+load("objects/back_df.rdata")
+
+tab <- datatable(
+  round(dcast(back_df,eff~variable),2),
+  rownames = FALSE,
+  editable = FALSE,
+  class = 'compact row-border',
+  escape = FALSE,
+  options = list(
+    dom = 'Bfrtip',
+    pageLength = 10,
+    deferRender = TRUE,
+    searching = FALSE,
+    editable = FALSE,
+    scroller = TRUE,
+    lengthChange = FALSE,
+    info=FALSE,
+    paging=FALSE
+   ,
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({'background-color': '#25ad28', 'color': '#fff'});",
+      "}"
+    )
+  )
+)
+tab
+
+ggplotly(ggplot(back_df,aes(100*eff,value,color=variable))+
+  geom_point()+
+  geom_line()+
+  geom_vline(xintercept = 30,linetype="dashed")+
+  geom_hline(yintercept = 0.7,linetype="dashed")+
+  scale_x_continuous(breaks = 100*seq(from = 0,to=1,by=0.1))+
+  scale_y_continuous(breaks = seq(from = 0,to=1,by=0.1))+
+  xlab("True Percent Change")+
+  ylab("Pr [ % Change > 30 ]")+
+  theme_light()+
+    my_theme
+)
+
+```
+
+```{r out.width='100%', fig.height=5}
+back_df$reps <- sapply(as.character(back_df$variable),function(i){as.numeric(strsplit(i,"_")[[1]][2])})
+ggplotly(ggplot(back_df,aes(reps,value,color=as.character(eff),group=eff))+
+  geom_point()+
+  geom_line()+
+  geom_hline(yintercept = 0.7,linetype="dashed")+
+  ylab("Pr [ % Change > 30 ]")+
+  theme_light()+
+  my_theme
+)
+
+```
+
+
+# Conclusions {.tabset .tabset-fade}
+Reviewing the results of the power analysis, one recommendation is to recruit 6 mice per arm for the initialization of the trial. This gives a power of 0.69 (very near 0.7) to detect a true percent change of 45%. Then for effects between 30% and 45% that are still yet to be detected, recruit another 6 mice for the second round of the trial. This gives a power of 0.72 to detect a true percent change of 40%. 
+
+This is simply one recommendation and other designs are certainly possible. The question will be what effect size is deemed high enough to drop treatments from the initial cohort from advancing to round 2 of the trial. 
+
+
+#
+<hr style="border-top: 3px solid #8c8b8b"> </hr>
+<table>
+  <tr>
+   <td style="width:20%"><p>![""](bayer_logo.png){width=100%}</p></td>
+    <td style="width:80%">
+      <h4><b>Bayer</b></h4>
+      <p><b>BRDS-RD-PBT-DSA-DS</b><br>
+	  <b>Early Testing Analytics</b><br>
+      800 N Lindbergh Blvd, Creve Coeur MO 63167</p>
+      <p><i>health for all, hunger for none</i></p>
+    </td>
+  </tr>
+</table>

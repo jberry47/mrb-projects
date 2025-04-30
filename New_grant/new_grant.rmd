@@ -1,0 +1,125 @@
+---
+title: "New Grant - Sample Size Determination"
+author: "Jeffrey Berry - Bayer IETA"
+output: 
+     html_document:
+          css: style.css
+          code_folding: hide
+          toc: false
+          toc_float: 
+               collapsed: false
+          toc_depth: 3
+          fig_caption: false
+geometry: margin=1in
+---
+This document was last updated on: **`r format(Sys.time(), '%d %B, %Y')`**
+<br/>
+<br/>
+
+
+# Introduction {.tabset .tabset-fade}
+A new study is being prepared and has two primary metrics of interest %Treg and %CD146+ each with historical data for reference. Each of the two metrics are taken for each individual at two timepoints: day 0 and day 42. The objective of this analysis is to identify how many pairs of samples must be collected to achieve a desired power of 0.8.
+
+
+# Analysis {.tabset .tabset-fade}
+
+```{r results='hide'}
+#load packages
+options(rlang_backtrace_on_error = "none")
+pkgs <- c("ggplot2","scales","reshape2","plyr","brms","bayestestR","stringr","patchwork","plotly","DT")
+suppressMessages(invisible(sapply(pkgs, require, character.only = TRUE)))
+
+library(bayesianUtils)
+
+my_theme <- theme(strip.background=element_rect(fill="gray50",color="gray20"),
+                  strip.text.x=element_text(size=14,color="white"),
+                  strip.text.y=element_text(size=14,color="white"))+
+            theme(axis.title= element_text(size = 18))+
+            theme(axis.text = element_text(size = 14))+
+            theme(axis.ticks.length=unit(0.2,"cm"))
+
+table_options <- function() {
+  list(
+    dom = 'Bfrtip',
+    pageLength = 10,
+    deferRender = TRUE,
+    searching = FALSE,
+    editable = TRUE,
+    scroller = TRUE,
+    lengthChange = FALSE
+    ,
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({'background-color': '#25ad28', 'color': '#fff'});",
+      "}"
+    )
+      )
+}
+```
+
+## Methods
+### Statisical
+Power of paired t-test is shown to be equivalent to the power of a one-sample t-test of the expected differences between pairs. For the two measures of interest, the Cohen's effect size is simply the difference of means divided by the square-root of the pooled variance estimator. With this in hand, evaluation of power is trivial and accomplished using pwr::pwr.t.test(). 
+
+Cohen's effect size calculations
+
+% Treg in blood
+
+Day 0 = Normal(mean, var)   8.0 +/- 3.0%
+
+Day 42 = Normal(mean, var)  5.8 +/- 3.5%
+
+d = (8.0-5.8)/sqrt(mean(3.0, 3.5)) = 1.22
+
+
+% CD146+ cells in tumor
+
+Day 0 = Normal( mean, var ) 2.6 +/- 0.9%
+
+Day 42 = Normal( mean, var ) 1.4 +/- 0.7%
+
+d = (2.6-1.4)/sqrt(mean(0.9,0.7)) = 1.34
+
+
+## Computation 
+#### __Objective__: Perform paired t-test power analysis for both %Treg and %CD146+ metrics
+
+In both metrics: the desired power is 80%, the desired false-positive rate is 0.05, and the alternative hypothesis is that day 42 has lower values than day 0 which is a one-sided test. In each metric the Cohen's effect size is calculated and using the parameters indicated previously, the sample sizes are estimated. 
+
+%Treg
+
+```{r out.width='100%', fig.height=6}
+d <- (8.0-5.8)/sqrt(mean(c(3.0,3.5)))
+pwr.t.test(d=d,power=0.8,type = "paired",alternative = "greater")
+```
+
+%CD146+
+
+```{r out.width='100%', fig.height=6}
+d <- (2.6-1.4)/sqrt(mean(c(0.9,0.7)))
+pwr.t.test(d=d,power=0.8,type = "paired",alternative = "greater")
+```
+
+#### __Result__
+%Treg indicates n = 5.765 and %CD146+ indicates n = 5.084.
+
+
+
+# Conclusions {.tabset .tabset-fade}
+It is recommended to round up to the nearest integer for sample size estimates and in both metrics, %Treg and %CD146+, the recommendation is the same, n = 6. If we expect a drop out rate or outlier rate of 5%, then the recommendation would be to have n = 6/.95 = 6.316 and rounded up makes n = 7. This means that with an outlier rate of 0.05, one pair of data can be eliminated as an outlier and the remaining 6 pairs would have sufficient power for inference.
+
+
+#
+<hr style="border-top: 3px solid #8c8b8b"> </hr>
+<table>
+  <tr>
+   <td style="width:20%"><p>![""](bayer_logo.png){width=100%}</p></td>
+    <td style="width:80%">
+      <h4><b>Bayer</b></h4>
+      <p><b>BRDS-RD-PBT-DSA-DS</b><br>
+	  <b>Imaging and Early Testing Analytics</b><br>
+      800 N Lindbergh Blvd, Creve Coeur MO 63167</p>
+      <p><i>health for all, hunger for none</i></p>
+    </td>
+  </tr>
+</table>
