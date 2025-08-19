@@ -7,7 +7,7 @@ get_5PL_estimate <- function(mod,od_val){
     return(NA)
   }else{
     mod_ests <- getPar(mod)$params
-    est_conc <- (mod_ests[3]-(1/mod_ests[4])*log10(((mod_ests[2]-mod_ests[1])/(od_val-mod_ests[1]))^(1/mod_ests[5])-1))
+    est_conc <- 2^(mod_ests[3]-(1/mod_ests[4])*log10(((mod_ests[2]-mod_ests[1])/(log2(od_val)-mod_ests[1]))^(1/mod_ests[5])-1))
     return(as.numeric(est_conc))
   }
 }
@@ -17,7 +17,7 @@ dat <- read.csv("K9_IL-12_ELISA_7-31-25.csv")
 samples <- read.csv("K9_IL-12_ELISA_7-31-25_samples.csv")
 
 ##-- Fit 5PL curve and estimate sample concentrations
-mod <- suppressWarnings(suppressMessages(nplr(y=dat$ODC,x=dat$Conc,useLog = F,npars=5,method = "res",silent = T)))
+mod <- suppressWarnings(suppressMessages(nplr(y=log2(dat$ODC),x=log2(dat$Conc),useLog = F,npars=5,method = "res",silent = T)))
 samples$Concentration <- 2*sapply(samples$OD,function(i) get_5PL_estimate(mod,i))
 
 ##-- Make line of standard curve for plotting purposes
