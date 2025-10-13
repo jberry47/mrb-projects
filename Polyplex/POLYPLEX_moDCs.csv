@@ -1,0 +1,25 @@
+Condition,Target_Name,Group,Value
+Blank,Cells,,3.06
+Blank,Cells,,1.74
+Blank,Cells,,1.23
+free mRNA,Cells,,2.1
+free mRNA,Cells,,2.36
+free mRNA,Cells,,2.32
+LPF3000,Cells,,8.41
+LPF3000,Cells,,7.96
+LPF3000,Cells,,8.06
+10:1,Cells,Polyplex,15.9
+10:1,Cells,Polyplex,16.5
+10:1,Cells,Polyplex,15
+7.5:1,Cells,Polyplex,11.4
+7.5:1,Cells,Polyplex,11.5
+7.5:1,Cells,Polyplex,10.6
+5:1,Cells,Polyplex,3.92
+5:1,Cells,Polyplex,3.71
+5:1,Cells,Polyplex,4.5
+2.5:1,Cells,Polyplex,2.94
+2.5:1,Cells,Polyplex,3.4
+2.5:1,Cells,Polyplex,2.35
+1:1,Cells,Polyplex,3.64
+1:1,Cells,Polyplex,2.95
+1:1,Cells,Polyplex,1.74

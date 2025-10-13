@@ -1,7 +1,7 @@
 library(ggplot2)
 library(patchwork)
 
-whole_data <- read.csv("Test_Data.csv")
+whole_data <- read.csv("P01_MV_Data.csv")
 
 #-- No touchy from here down ---
 whole_data$Parameter <- trimws(whole_data$Parameter)
@@ -63,7 +63,7 @@ for(what_patient in unique(whole_data$Patient_ID)){
   ggsave(paste0(what_patient,"/temp_baseline-",what_patient,".png"),plot=p_temp2,dpi=300,width=3.5,height = 2.89)
   
   #-- TNFa
-  p_tnfa <- ggplot(data=dat[dat$Condition == "TNFa" & dat$Week %in% paste("Week",1:3),],aes(Parameter,Value))+
+  p_tnfa <- ggplot(data=temp_df[temp_df$Condition == "TNFa" & temp_df$Week %in% paste("Week",1:3),],aes(Parameter,Value))+
     facet_grid(~Week)+
     geom_line(aes(group=Patient_ID),color="#0a0573")+
     geom_point()+
