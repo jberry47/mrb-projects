@@ -1,4 +1,7 @@
 ##- Load libraries and make helper function
+if (!requireNamespace("nplr", quietly = TRUE)) {
+  install.packages("nplr")
+}
 library(nplr)
 library(ggplot2)
 
