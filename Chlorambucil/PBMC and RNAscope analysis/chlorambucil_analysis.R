@@ -12,7 +12,19 @@ for(measure in colnames(dat)[!colnames(dat) %in% c("Patient","Day")]){
   
   my_ylab <- sapply(my_measure,function(i){
     if(i == "Lymphocyte.count"){"Lymphocytes (cells/µL)"}
-    else if(i == "X..T.cells"){"%T Cells"}
+    else if(i == "X..T.cells"){"% T cells"}
+    else if(i == "Abs..T.cells"){"Abs. T cells (cells/µL)"}
+    else if(i == "X..Th.cells"){"% Th cells"}
+    else if(i == "Abs..Th.cells"){"Abs. Th cells (cells/µL)"}
+    else if(i == "X..CTLs"){"% CTLs"}
+    else if(i == "Abs..CTLs"){"Abs. CTLs (cells/µL)"}
+    else if(i == "X..Treg.cells"){"% Treg cells"}
+    else if(i == "Abs..Treg.cells"){"Abs. Treg cells (cells/µL)"}
+    else if(i == "X..Treg.CTL"){"% Treg:CTL"}
+    else if(i == "Abs..Treg.CTL"){"Abs. Treg:CTL"}
+    else if(i == "X..CTL.Treg"){"% CTL:Treg"}
+    else if(i == "Abs..CTL.Treg"){"Abs. CTL:Treg"}
+    else if(i == "X..CD146."){"% CD146+ cells"}
     else if(i == ""){""}
     else{NA}
   })
