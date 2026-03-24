@@ -1,161 +1,161 @@
-﻿Patient,Steroid,Day,ACTH,Cortisol Value
-P01,Pre-Steroid Tx,Day 0,pre-ACTH,69.3
-P01,Pre-Steroid Tx,Day 0,post-ACTH,425
-P01,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
-P01,Post-Steroid Tx,Day 5,post-ACTH,166
-P02,Pre-Steroid Tx,Day 0,pre-ACTH,96.8
-P02,Pre-Steroid Tx,Day 0,post-ACTH,367
-P02,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
-P02,Post-Steroid Tx,Day 5,post-ACTH,89.9
-P03,Pre-Steroid Tx,Day 0,pre-ACTH,79.5
-P03,Pre-Steroid Tx,Day 0,post-ACTH,381
-P03,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
-P03,Post-Steroid Tx,Day 5,post-ACTH,125
-P04,Pre-Steroid Tx,Day 0,pre-ACTH,54.6
-P04,Pre-Steroid Tx,Day 0,post-ACTH,201
-P04,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
-P04,Post-Steroid Tx,Day 5,post-ACTH,86.9
-P05,Pre-Steroid Tx,Day 0,pre-ACTH,263
-P05,Pre-Steroid Tx,Day 0,post-ACTH,408
-P05,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
-P05,Post-Steroid Tx,Day 5,post-ACTH,145
-P06,Pre-Steroid Tx,Day 0,pre-ACTH,113
-P06,Pre-Steroid Tx,Day 0,post-ACTH,408
-P06,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
-P06,Post-Steroid Tx,Day 5,post-ACTH,168
-P07,Pre-Steroid Tx,Day 0,pre-ACTH,150
-P07,Pre-Steroid Tx,Day 0,post-ACTH,502
-P07,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
-P07,Post-Steroid Tx,Day 5,post-ACTH,140
-P08,Pre-Steroid Tx,Day 0,pre-ACTH,84.4
-P08,Pre-Steroid Tx,Day 0,post-ACTH,232
-P08,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
-P08,Post-Steroid Tx,Day 5,post-ACTH,87.7
-P09,Pre-Steroid Tx,Day 0,pre-ACTH,133
-P09,Pre-Steroid Tx,Day 0,post-ACTH,400
-P09,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
-P09,Post-Steroid Tx,Day 5,post-ACTH,88.6
-P10,Pre-Steroid Tx,Day 0,pre-ACTH,
-P10,Pre-Steroid Tx,Day 0,post-ACTH,
-P10,Post-Steroid Tx,Day 5,pre-ACTH,
-P10,Post-Steroid Tx,Day 5,post-ACTH,
-P11,Pre-Steroid Tx,Day 0,pre-ACTH,
-P11,Pre-Steroid Tx,Day 0,post-ACTH,
-P11,Post-Steroid Tx,Day 5,pre-ACTH,
-P11,Post-Steroid Tx,Day 5,post-ACTH,
-P12,Pre-Steroid Tx,Day 0,pre-ACTH,
-P12,Pre-Steroid Tx,Day 0,post-ACTH,
-P12,Post-Steroid Tx,Day 5,pre-ACTH,
-P12,Post-Steroid Tx,Day 5,post-ACTH,
-P13,Pre-Steroid Tx,Day 0,pre-ACTH,
-P13,Pre-Steroid Tx,Day 0,post-ACTH,
-P13,Post-Steroid Tx,Day 5,pre-ACTH,
-P13,Post-Steroid Tx,Day 5,post-ACTH,
-P14,Pre-Steroid Tx,Day 0,pre-ACTH,
-P14,Pre-Steroid Tx,Day 0,post-ACTH,
-P14,Post-Steroid Tx,Day 5,pre-ACTH,
-P14,Post-Steroid Tx,Day 5,post-ACTH,
-P15,Pre-Steroid Tx,Day 0,pre-ACTH,
-P15,Pre-Steroid Tx,Day 0,post-ACTH,
-P15,Post-Steroid Tx,Day 5,pre-ACTH,
-P15,Post-Steroid Tx,Day 5,post-ACTH,
-P16,Pre-Steroid Tx,Day 0,pre-ACTH,
-P16,Pre-Steroid Tx,Day 0,post-ACTH,
-P16,Post-Steroid Tx,Day 5,pre-ACTH,
-P16,Post-Steroid Tx,Day 5,post-ACTH,
-P17,Pre-Steroid Tx,Day 0,pre-ACTH,
-P17,Pre-Steroid Tx,Day 0,post-ACTH,
-P17,Post-Steroid Tx,Day 5,pre-ACTH,
-P17,Post-Steroid Tx,Day 5,post-ACTH,
-P18,Pre-Steroid Tx,Day 0,pre-ACTH,
-P18,Pre-Steroid Tx,Day 0,post-ACTH,
-P18,Post-Steroid Tx,Day 5,pre-ACTH,
-P18,Post-Steroid Tx,Day 5,post-ACTH,
-P19,Pre-Steroid Tx,Day 0,pre-ACTH,
-P19,Pre-Steroid Tx,Day 0,post-ACTH,
-P19,Post-Steroid Tx,Day 5,pre-ACTH,
-P19,Post-Steroid Tx,Day 5,post-ACTH,
-P20,Pre-Steroid Tx,Day 0,pre-ACTH,
-P20,Pre-Steroid Tx,Day 0,post-ACTH,
-P20,Post-Steroid Tx,Day 5,pre-ACTH,
-P20,Post-Steroid Tx,Day 5,post-ACTH,
-P21,Pre-Steroid Tx,Day 0,pre-ACTH,28.7
-P21,Pre-Steroid Tx,Day 0,post-ACTH,295
-P21,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
-P21,Post-Steroid Tx,Day 14,post-ACTH,74.2
-P22,Pre-Steroid Tx,Day 0,pre-ACTH,364
-P22,Pre-Steroid Tx,Day 0,post-ACTH,684
-P22,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
-P22,Post-Steroid Tx,Day 14,post-ACTH,47.2
-P23,Pre-Steroid Tx,Day 0,pre-ACTH,44.4
-P23,Pre-Steroid Tx,Day 0,post-ACTH,281
-P23,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
-P23,Post-Steroid Tx,Day 14,post-ACTH,80.6
-P24,Pre-Steroid Tx,Day 0,pre-ACTH,35.6
-P24,Pre-Steroid Tx,Day 0,post-ACTH,309
-P24,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
-P24,Post-Steroid Tx,Day 14,post-ACTH,58.8
-P25,Pre-Steroid Tx,Day 0,pre-ACTH,53
-P25,Pre-Steroid Tx,Day 0,post-ACTH,430
-P25,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
-P25,Post-Steroid Tx,Day 14,post-ACTH,92.2
-P26,Pre-Steroid Tx,Day 0,pre-ACTH,33.7
-P26,Pre-Steroid Tx,Day 0,post-ACTH,281
-P26,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
-P26,Post-Steroid Tx,Day 14,post-ACTH,<lloq
-P27,Pre-Steroid Tx,Day 0,pre-ACTH,125
-P27,Pre-Steroid Tx,Day 0,post-ACTH,408
-P27,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
-P27,Post-Steroid Tx,Day 14,post-ACTH,40.6
-P28,Pre-Steroid Tx,Day 0,pre-ACTH,65.9
-P28,Pre-Steroid Tx,Day 0,post-ACTH,200
-P28,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
-P28,Post-Steroid Tx,Day 14,post-ACTH,43.3
-P29,Pre-Steroid Tx,Day 0,pre-ACTH,89.7
-P29,Pre-Steroid Tx,Day 0,post-ACTH,328
-P29,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
-P29,Post-Steroid Tx,Day 14,post-ACTH,31.7
-P30,Pre-Steroid Tx,Day 0,pre-ACTH,48
-P30,Pre-Steroid Tx,Day 0,post-ACTH,247
-P30,Post-Steroid Tx,Day 14,pre-ACTH,
-P30,Post-Steroid Tx,Day 14,post-ACTH,
-P31,Pre-Steroid Tx,Day 0,pre-ACTH,125
-P31,Pre-Steroid Tx,Day 0,post-ACTH,315
-P31,Post-Steroid Tx,Day 14,pre-ACTH,
-P31,Post-Steroid Tx,Day 14,post-ACTH,
-P32,Pre-Steroid Tx,Day 0,pre-ACTH,111
-P32,Pre-Steroid Tx,Day 0,post-ACTH,406
-P32,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
-P32,Post-Steroid Tx,Day 14,post-ACTH,<lloq
-P33,Pre-Steroid Tx,Day 0,pre-ACTH,
-P33,Pre-Steroid Tx,Day 0,post-ACTH,
-P33,Post-Steroid Tx,Day 14,pre-ACTH,
-P33,Post-Steroid Tx,Day 14,post-ACTH,
-P34,Pre-Steroid Tx,Day 0,pre-ACTH,
-P34,Pre-Steroid Tx,Day 0,post-ACTH,
-P34,Post-Steroid Tx,Day 14,pre-ACTH,
-P34,Post-Steroid Tx,Day 14,post-ACTH,
-P35,Pre-Steroid Tx,Day 0,pre-ACTH,
-P35,Pre-Steroid Tx,Day 0,post-ACTH,
-P35,Post-Steroid Tx,Day 14,pre-ACTH,
-P35,Post-Steroid Tx,Day 14,post-ACTH,
-P36,Pre-Steroid Tx,Day 0,pre-ACTH,
-P36,Pre-Steroid Tx,Day 0,post-ACTH,
-P36,Post-Steroid Tx,Day 14,pre-ACTH,
-P36,Post-Steroid Tx,Day 14,post-ACTH,
-P37,Pre-Steroid Tx,Day 0,pre-ACTH,
-P37,Pre-Steroid Tx,Day 0,post-ACTH,
-P37,Post-Steroid Tx,Day 14,pre-ACTH,
-P37,Post-Steroid Tx,Day 14,post-ACTH,
-P38,Pre-Steroid Tx,Day 0,pre-ACTH,
-P38,Pre-Steroid Tx,Day 0,post-ACTH,
-P38,Post-Steroid Tx,Day 14,pre-ACTH,
-P38,Post-Steroid Tx,Day 14,post-ACTH,
-P39,Pre-Steroid Tx,Day 0,pre-ACTH,
-P39,Pre-Steroid Tx,Day 0,post-ACTH,
-P39,Post-Steroid Tx,Day 14,pre-ACTH,
-P39,Post-Steroid Tx,Day 14,post-ACTH,
-P40,Pre-Steroid Tx,Day 0,pre-ACTH,
-P40,Pre-Steroid Tx,Day 0,post-ACTH,
-P40,Post-Steroid Tx,Day 14,pre-ACTH,
-P40,Post-Steroid Tx,Day 14,post-ACTH,
+﻿Patient,Cohort,Steroid,Day,ACTH,Cortisol Value
+P01,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,69.3
+P01,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,425
+P01,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
+P01,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,166
+P02,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,96.8
+P02,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,367
+P02,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
+P02,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,89.9
+P03,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,79.5
+P03,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,381
+P03,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
+P03,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,125
+P04,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,54.6
+P04,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,201
+P04,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
+P04,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,86.9
+P05,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,263
+P05,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,408
+P05,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
+P05,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,145
+P06,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,113
+P06,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,408
+P06,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
+P06,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,168
+P07,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,150
+P07,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,502
+P07,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
+P07,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,140
+P08,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,84.4
+P08,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,232
+P08,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
+P08,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,87.7
+P09,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,133
+P09,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,400
+P09,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,<lloq
+P09,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,88.6
+P10,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P10,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P10,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,
+P10,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,
+P11,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P11,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P11,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,
+P11,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,
+P12,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P12,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P12,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,
+P12,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,
+P13,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P13,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P13,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,
+P13,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,
+P14,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P14,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P14,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,
+P14,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,
+P15,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P15,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P15,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,
+P15,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,
+P16,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P16,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P16,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,
+P16,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,
+P17,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P17,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P17,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,
+P17,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,
+P18,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P18,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P18,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,
+P18,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,
+P19,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P19,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P19,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,
+P19,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,
+P20,5-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P20,5-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P20,5-Day Cohort,Post-Steroid Tx,Day 5,pre-ACTH,
+P20,5-Day Cohort,Post-Steroid Tx,Day 5,post-ACTH,
+P21,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,28.7
+P21,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,295
+P21,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
+P21,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,74.2
+P22,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,364
+P22,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,684
+P22,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
+P22,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,47.2
+P23,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,44.4
+P23,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,281
+P23,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
+P23,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,80.6
+P24,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,35.6
+P24,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,309
+P24,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
+P24,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,58.8
+P25,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,53
+P25,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,430
+P25,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
+P25,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,92.2
+P26,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,33.7
+P26,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,281
+P26,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
+P26,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,<lloq
+P27,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,125
+P27,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,408
+P27,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
+P27,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,40.6
+P28,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,65.9
+P28,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,200
+P28,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
+P28,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,43.3
+P29,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,89.7
+P29,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,328
+P29,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
+P29,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,31.7
+P30,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,48
+P30,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,247
+P30,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,
+P30,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,
+P31,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,125
+P31,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,315
+P31,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,
+P31,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,
+P32,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,111
+P32,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,406
+P32,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,<lloq
+P32,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,<lloq
+P33,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P33,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P33,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,
+P33,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,
+P34,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P34,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P34,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,
+P34,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,
+P35,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P35,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P35,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,
+P35,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,
+P36,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P36,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P36,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,
+P36,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,
+P37,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P37,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P37,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,
+P37,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,
+P38,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P38,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P38,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,
+P38,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,
+P39,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P39,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P39,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,
+P39,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,
+P40,14-Day Cohort,Pre-Steroid Tx,Day 0,pre-ACTH,
+P40,14-Day Cohort,Pre-Steroid Tx,Day 0,post-ACTH,
+P40,14-Day Cohort,Post-Steroid Tx,Day 14,pre-ACTH,
+P40,14-Day Cohort,Post-Steroid Tx,Day 14,post-ACTH,
