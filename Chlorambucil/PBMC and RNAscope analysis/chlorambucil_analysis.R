@@ -25,9 +25,9 @@ for(measure in colnames(dat)[!colnames(dat) %in% c("Patient","Day")]){
     else if(i == "X..CTL.Treg"){"% CTL:Treg"}
     else if(i == "Abs..CTL.Treg"){"Abs. CTL:Treg"}
     else if(i == "X..CD146."){"% CD146+ cells"}
-    else if(i == "X..intratumor.CD8.T.cells"){"% intratumor CD8 T cells"}
-    else if(i == "X..intratumor.Tregs"){"% intratumor Tregs"}
-    else if(i == "X..intratumor.CD8.Treg"){"% intratumor CD8:Treg"}
+    else if(i == "X..intratumor.CD8.T.cells"){"% intratumor CD8+ cells"}
+    else if(i == "X..intratumor.Tregs"){"% intratumor FOXP3+ cells"}
+    else if(i == "X..intratumor.CD8.Treg"){"% intratumor CD8+:FOXP3+ cells"}
     else{NA}
   })
 
