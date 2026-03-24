@@ -1,7 +1,9 @@
 library(ggplot2)
 library(ggpubr)
 
-dat <- read.csv("steroid.data.file.csv", header = TRUE, stringsAsFactors = FALSE)
+dat <- read.csv("Chem.data.file.csv", header = TRUE, stringsAsFactors = FALSE)
+
+not_nice_measures <- c("new_trait")
 
 for(measure in colnames(dat)[!colnames(dat) %in% c("Patient","Day")]){
   df <- na.omit(dat[,c("Patient","Day",measure)])
@@ -9,9 +11,7 @@ for(measure in colnames(dat)[!colnames(dat) %in% c("Patient","Day")]){
   my_measure <- sym(measure)
   
   my_ylab <- sapply(my_measure,function(i){
-    if(i == "Pre-ACTH.cortisol"){"Cortisol (nmol/L)"}
-    else if(i == "Post-ACTH.cortisol"){"Cortisol (nmol/L)"}
-    else if(i == "eACTH"){"eACTH (pg/mL)"}
+    if(i == "eACTH"){"eACTH (pg/mL)"}
     else if(i == "BUN"){"BUN (mg/dL)"}
     else if(i == "ALP"){"ALP (U/L)"}
     else if(i == "cALP"){"cALP (U/L)"}
@@ -19,6 +19,16 @@ for(measure in colnames(dat)[!colnames(dat) %in% c("Patient","Day")]){
     else if(i == ""){""}
     else{NA}
   })
+
+  if(measure %in% not_nice_measures){
+    my_comparisons <- list(c("Day 0", "Day 5"))
+    my_breaks <- c("Day 0", "Day 5")
+    my_width <- 4.12
+  }else{
+    my_comparisons <- list(c("Day 0", "Day 21"), c("Day 0", "Day 42"), c("Day 21", "Day 42"))
+    my_breaks <- c("Day 0","Day 21","Day 42")
+    my_width <- 6.67
+  }
 
   p <- ggplot(df, aes(x=Day,y=!!my_measure))+
     geom_line(aes(group=Patient),size=1.5,color="gray80")+

@@ -3,7 +3,7 @@ library(ggpubr)
 
 dat <- read.csv("Compiled.data.file.csv", header = TRUE, stringsAsFactors = FALSE)
 
-not_nice_measures <- c("X..CD146.","new_trait")
+not_nice_measures <- c("X..CD146.","X..intratumor.CD8.T.cells","X..intratumor.Tregs","X..intratumor.CD8.Treg")
 
 for(measure in colnames(dat)[!colnames(dat) %in% c("Patient","Day")]){
   df <- na.omit(dat[,c("Patient","Day",measure)])
@@ -25,7 +25,9 @@ for(measure in colnames(dat)[!colnames(dat) %in% c("Patient","Day")]){
     else if(i == "X..CTL.Treg"){"% CTL:Treg"}
     else if(i == "Abs..CTL.Treg"){"Abs. CTL:Treg"}
     else if(i == "X..CD146."){"% CD146+ cells"}
-    else if(i == ""){""}
+    else if(i == "X..intratumor.CD8.T.cells"){"% intratumor CD8 T cells"}
+    else if(i == "X..intratumor.Tregs"){"% intratumor Tregs"}
+    else if(i == "X..intratumor.CD8.Treg"){"% intratumor CD8:Treg"}
     else{NA}
   })
 
